@@ -9,9 +9,9 @@ import { ResourceComponent } from './components/resources/resource.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'actividades', component: CalendarComponent },
   { path: 'nosotrxs', component: NosotrxsComponent },
-  { path: 'resources', component: ResourceComponent },
+  { path: 'actividades', component: CalendarComponent },
+  { path: 'proyectos', component: ResourceComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

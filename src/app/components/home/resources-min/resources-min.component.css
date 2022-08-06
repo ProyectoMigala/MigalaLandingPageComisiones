@@ -1,3 +1,10 @@
+.proyectos-button {
+  height: 50px;
+  font-size: 25px;
+  margin-top: 2%;
+  border-radius: 25px;
+}
+
 .main-wrapper {
   margin-top: 7%;
   margin-left: 15%;
@@ -7,10 +14,9 @@
 
 .content {
   padding: 16px;
-}
-
-mat-toolbar {
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .proyectos-title {

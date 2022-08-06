@@ -1,6 +1,23 @@
 .main-wrapper{
-  display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 7%;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actividades-title {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 3%;
+  text-align: center;
+  font-weight: 550;
+  font-size: calc(5px + 5vmin);
 }
