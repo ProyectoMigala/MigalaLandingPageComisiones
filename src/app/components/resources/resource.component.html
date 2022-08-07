@@ -8,8 +8,8 @@
   <div class="content">
     <div fxLayout="row wrap" fxLayoutGap="20px grid">
       <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%"
-        *ngFor="let resource of resources | filter : searchText">
-        <resource-3d-generic-component [resource]="resource" [width]="400" [height]="500"></resource-3d-generic-component>
+        *ngFor="let resource of resources.slice().reverse() | filter : searchText">
+        <resource-3d-generic-component [resource]="resource" [width]="400" [height]="1000"></resource-3d-generic-component>
       </div>
     </div>
   </div>

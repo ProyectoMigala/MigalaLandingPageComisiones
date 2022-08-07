@@ -1,5 +1,3 @@
-import { RESOURCE_TAGS } from '../resource';
-
 import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { fromEvent } from 'rxjs'
 import { map, mergeWith, delay, share, repeat, switchMap, takeUntil } from 'rxjs/operators'
@@ -16,9 +14,7 @@ export class Resource3DGenericComponent implements OnInit {
 
     @Input() height!: any;
     @Input() width!: any;
-
     @Input() resource!: any;
-    tags: any = RESOURCE_TAGS;
 
     get mousePX() {
         return this.mouseX / this.width;
@@ -35,14 +31,6 @@ export class Resource3DGenericComponent implements OnInit {
     constructor() {
 
     }
-
-    getStyle(tag: string) {
-        return {
-            'background-color': this.tags[tag].color,
-            'color': this.tags[tag].colorfont
-        }
-    }
-
     cardStyle() {
         return this.transformStyle();
     }

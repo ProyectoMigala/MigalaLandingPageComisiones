@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 
+// google sheets service
+import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
+
 // material
 import { MaterialModule } from './material.module';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -41,6 +44,9 @@ import { ResourceComponent } from './components/resources/resource.component';
 import { ResourceGenericComponent } from './components/resources/resource/resourceGeneric.component';
 import { Resource3DGenericComponent } from './components/resources/resource-3d/resourceGeneric3d.component';
 import { ResourcesMinComponent } from './components/home/resources-min/resources-min.component';
+
+// environment
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -78,7 +84,12 @@ import { ResourcesMinComponent } from './components/home/resources-min/resources
       useClass: InterceptService,
       multi: true
     },
-    LoaderService
+    LoaderService,
+    {
+      provide: API_KEY,
+      useValue: environment.googleSheetsApiKey,
+    },
+    GoogleSheetsDbService
   ],
   bootstrap: [AppComponent]
 })

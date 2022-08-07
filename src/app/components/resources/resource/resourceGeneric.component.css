@@ -17,7 +17,19 @@ mat-card button {
   font-size: 14px;
 }
 
+.img {
+  max-height: 250px;
+  max-width: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
 .aling-content {
   display: inline-flex;
   margin: 2px;
+}
+
+.normal-text {
+  color: rgb(65, 65, 65);
+  font-weight: 400;
 }

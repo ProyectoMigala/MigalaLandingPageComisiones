@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RESOURCES } from '../../resources/resource'
+import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { Observable } from 'rxjs';
+
+import { environment } from '../../../../environments/environment.prod';
+import { Project, attributesMapping } from '../../resources/resource';
 
 @Component({
   selector: 'resources-min',
@@ -8,18 +12,29 @@ import { RESOURCES } from '../../resources/resource'
 })
 export class ResourcesMinComponent implements OnInit {
 
-  gridColumns = 3;
-  resources: Array<any> = [];
+    projectObserver$!: Observable<Project[]>
 
-  constructor() {
-    this.getData();
-  }
+    resources!: any
+    searchText: string = ''
+    gridColumns = 3
 
-  ngOnInit(): void {
-  }
+    constructor(private googleSheetsDbService: GoogleSheetsDbService) {
+        this.getData()
+    }
 
-  private getData() {
-    this.resources = RESOURCES.slice(0, 3)
-  }
+    ngOnInit(): void {
+    }
 
+    private getData() {
+
+        this.projectObserver$ = this.googleSheetsDbService.get<Project>(
+            environment.project.spreadsheetId,
+            environment.project.worksheetName,
+            attributesMapping
+        )
+
+        this.projectObserver$.subscribe(data => {
+            this.resources = data.slice(-3).reverse()
+        })
+    }
 }

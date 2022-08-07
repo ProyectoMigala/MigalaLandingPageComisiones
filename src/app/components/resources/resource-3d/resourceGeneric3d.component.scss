@@ -6,6 +6,11 @@ $returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transform-style: preserve-3d;
 }
 
+.normal-text {
+  color: rgb(65, 65, 65);
+  font-weight: 400;
+}
+
 mat-card {
   margin-bottom: 2rem;
 }
@@ -25,7 +30,7 @@ mat-card button {
   font-size: 14px;
 }
 
-mat-card a img {
+.img {
   max-height: 250px;
   max-width: auto;
   object-fit: cover;
