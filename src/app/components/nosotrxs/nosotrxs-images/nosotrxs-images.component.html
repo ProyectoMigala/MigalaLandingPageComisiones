@@ -1,7 +1,13 @@
-<div>
-  <h1>Movimientos Locales</h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  </p>
+<div class="nosotrxs-images-container">
+
+  <button mat-flat-button color="primary" class="nosotrxs-button-page">
+    Galeria completa
+  </button>
+
+  <div class="nosotrxs-gallery-wrapper">
+    <div class="nosotrxs-gallery-item" *ngFor="let item of minimalGallery">
+      <img [src]="item" alt="nosotrxs-gallery image" loading="lazy"/>
+    </div>
+  </div>
+
 </div>
