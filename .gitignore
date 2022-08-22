@@ -43,3 +43,4 @@ Thumbs.db
 .gitsecret/keys/random_seed
 !*.secret
 src/environments/environment.prod.ts
+src/environments/environment.prod.jalisco.ts
