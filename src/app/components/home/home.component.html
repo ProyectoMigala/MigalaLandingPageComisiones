@@ -3,7 +3,7 @@
     <div class="home-header-content">
       <div class="home-header-titles">
         <h1 class="title-page">Bienvenidx a proyecto</h1>
-        <h1 class="title-page">Migala <span class="title-estado">ESTADO</span></h1>
+        <h1 class="title-page">Migala <span class="title-estado">{{estado}}</span></h1>
         <p class="text-page">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -27,11 +27,10 @@
         <h1 class="redes-sociales-title">Nuestras Redes Sociales</h1>
       </div>
       <div class="redes-sociales-content">
-        <mat-icon class="icon-display" fontSet="fa-brands" fontIcon="fa-facebook"></mat-icon>
-        <mat-icon class="icon-display" fontSet="fa-brands" fontIcon="fa-instagram"></mat-icon>
-        <mat-icon class="icon-display" fontSet="fa-brands" fontIcon="fa-twitter"></mat-icon>
-        <mat-icon class="icon-display" fontSet="fa-brands" fontIcon="fa-youtube"></mat-icon>
-        <mat-icon class="icon-display" fontSet="fa-brands" fontIcon="fa-tiktok"></mat-icon>
+        <a *ngFor="let item of socialMedia" class="redes-sociales-content-url" href="{{item.url}}" target="_blank">
+          <mat-icon  [fontSet]="item.fontSet" [fontIcon]="item.fontIcon"
+            class="icon-display"></mat-icon>
+        </a>
       </div>
     </div>
   </div>
@@ -58,15 +57,15 @@
       </div>
       <div class="actividades-text-content-summary">
         <p class="actividades-text-content-summary-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Aenean accumsan, est a faucibus pellentesque, ligula mauris viverra ex, 
-          at mattis justo lectus quis ligula. 
-          Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-          Maecenas semper lectus sed efficitur tempus. 
-          Quisque urna orci, interdum in sagittis at, dapibus quis metus. 
-          Vestibulum neque turpis, consectetur non pellentesque a, efficitur vel sem. 
-          Duis faucibus rhoncus mi, eu laoreet ligula lobortis eu. 
-          In ipsum velit, accumsan eget convallis a, ultrices vitae tellus. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aenean accumsan, est a faucibus pellentesque, ligula mauris viverra ex,
+          at mattis justo lectus quis ligula.
+          Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Maecenas semper lectus sed efficitur tempus.
+          Quisque urna orci, interdum in sagittis at, dapibus quis metus.
+          Vestibulum neque turpis, consectetur non pellentesque a, efficitur vel sem.
+          Duis faucibus rhoncus mi, eu laoreet ligula lobortis eu.
+          In ipsum velit, accumsan eget convallis a, ultrices vitae tellus.
           Donec laoreet a justo at egestas. Vivamus auctor id dui a malesuada.
         </p>
         <div class="actividades-text-content-summary-button-container">
