@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { GoogleCalendarService } from '../generics/services/home.service';
+import { environment } from '../../../environments/environment.prod'
 
 @Component({
     selector: 'nosotrxs-component',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NosotrxsComponent implements OnInit {
 
-    constructor() {
+    @Input() sizeImages = 0;
+    organigrama: string = ''
+    orgranigramaCompleto = environment.organigramaCompleto;
+
+    constructor(private googleCalendarService: GoogleCalendarService) {
     }
 
     ngOnInit() {
+        this.googleCalendarService.getOrganigrama().subscribe((data: any) => {
+            this.organigrama = data.thumbnailLink
+        })
     }
 }

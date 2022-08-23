@@ -8,27 +8,25 @@ import { GoogleDriveService } from '../nosotrxs.service';
 })
 export class NosotrxsImagesComponent implements OnInit {
 
-    @Input() size!: Number;
-
-    minimalGallery: Array<string> = [
-    "https://picsum.photos/200/300?random=1",
-    "https://picsum.photos/200/300?random=2",
-    "https://picsum.photos/200/300?random=3",
-    "https://picsum.photos/200/300?random=4",
-    "https://picsum.photos/200/300?random=5",
-    "https://picsum.photos/200/300?random=6",
-    "https://picsum.photos/200/300?random=7",
-    "https://picsum.photos/200/300?random=8",
-  ]
+    @Input() sizeImages = 0;
+    minimalGallery: Array<string> = []
 
     constructor(private googleDriveService: GoogleDriveService) {
     }
 
     ngOnInit() {
         this.googleDriveService.getDataFromDirectory().subscribe((data: any) => {
-            console.log(data)
-        })
 
-        console.log(this.size)
+            let items = undefined
+            if (this.sizeImages > 0) {
+                items = data.items.slice(0, this.sizeImages)
+            } else {
+                items = data.items
+            }
+
+            this.minimalGallery = items.map((item: any) => {
+                return item.thumbnailLink
+            })
+        })
     }
 }

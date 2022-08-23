@@ -35,6 +35,7 @@ import { MaterialElevationDirective } from './components/generics/utils/material
 // services
 import { LoaderService } from './components/generics/utils/loader.service';
 import { GoogleDriveService } from './components/nosotrxs/nosotrxs.service';
+import { GoogleCalendarService } from './components/generics/services/home.service';
 
 // components
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -93,7 +94,8 @@ import { environment } from '../environments/environment.prod';
       useValue: environment.googleSheetsApiKey,
     },
     GoogleSheetsDbService,
-    GoogleDriveService
+    GoogleDriveService,
+    GoogleCalendarService
   ],
   bootstrap: [AppComponent]
 })

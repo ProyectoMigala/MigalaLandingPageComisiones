@@ -28,14 +28,13 @@
       </div>
       <div class="redes-sociales-content">
         <a *ngFor="let item of socialMedia" class="redes-sociales-content-url" href="{{item.url}}" target="_blank">
-          <mat-icon  [fontSet]="item.fontSet" [fontIcon]="item.fontIcon"
-            class="icon-display"></mat-icon>
+          <mat-icon [fontSet]="item.fontSet" [fontIcon]="item.fontIcon" class="icon-display"></mat-icon>
         </a>
       </div>
     </div>
   </div>
   <div class="nosotrxs">
-    <nosotrxs-component></nosotrxs-component>
+    <nosotrxs-component [sizeImages]="12"></nosotrxs-component>
   </div>
   <h1 class="actividades-title">Actividades</h1>
   <div class="actividades">
@@ -49,27 +48,19 @@
     <div class="actividades-text-content">
       <div class="actividades-text-content-cont">
         <h1 class="actividades-text-content-text">
-          Nombre de la actividad
+          {{ nextEvent.title }}
         </h1>
         <h1 class="actividades-text-content-text">
-          Fecha de la actividad
+          {{ nextEvent.time }}
         </h1>
       </div>
       <div class="actividades-text-content-summary">
         <p class="actividades-text-content-summary-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aenean accumsan, est a faucibus pellentesque, ligula mauris viverra ex,
-          at mattis justo lectus quis ligula.
-          Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Maecenas semper lectus sed efficitur tempus.
-          Quisque urna orci, interdum in sagittis at, dapibus quis metus.
-          Vestibulum neque turpis, consectetur non pellentesque a, efficitur vel sem.
-          Duis faucibus rhoncus mi, eu laoreet ligula lobortis eu.
-          In ipsum velit, accumsan eget convallis a, ultrices vitae tellus.
-          Donec laoreet a justo at egestas. Vivamus auctor id dui a malesuada.
+          {{ nextEvent.description }}
         </p>
         <div class="actividades-text-content-summary-button-container">
-          <button mat-flat-button color="primary" class="actividades-text-content-summary-button">
+          <button mat-flat-button routerLink="/actividades" color="primary"
+            class="actividades-text-content-summary-button">
             Todas las actividades
           </button>
         </div>

@@ -35,3 +35,9 @@
   transform: scale(1.2) rotate(0deg);
   transition: 2.5s;
 }
+
+.nosotrxs-button {
+  height: 50px;
+  font-size: 25px;
+  border-radius: 25px;
+}
