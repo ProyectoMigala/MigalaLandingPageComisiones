@@ -34,11 +34,14 @@ import { MaterialElevationDirective } from './components/generics/utils/material
 
 // services
 import { LoaderService } from './components/generics/utils/loader.service';
+import { GoogleDriveService } from './components/nosotrxs/nosotrxs.service';
+import { GoogleCalendarService } from './components/generics/services/home.service';
 
 // components
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { NosotrxsComponent } from './components/nosotrxs/nosotrxs.component';
+import { NosotrxsImagesComponent } from './components/nosotrxs/nosotrxs-images/nosotrxs-images.component';
 import { CalendarComponent } from './components/calendars/calendar.component';
 import { ResourceComponent } from './components/resources/resource.component';
 import { ResourceGenericComponent } from './components/resources/resource/resourceGeneric.component';
@@ -59,6 +62,7 @@ import { environment } from '../environments/environment.prod';
     NotFoundComponent,
     CalendarComponent,
     NosotrxsComponent,
+    NosotrxsImagesComponent,
     ResourceGenericComponent,
     ResourceComponent,
     ResourcesMinComponent,
@@ -89,7 +93,9 @@ import { environment } from '../environments/environment.prod';
       provide: API_KEY,
       useValue: environment.googleSheetsApiKey,
     },
-    GoogleSheetsDbService
+    GoogleSheetsDbService,
+    GoogleDriveService,
+    GoogleCalendarService
   ],
   bootstrap: [AppComponent]
 })

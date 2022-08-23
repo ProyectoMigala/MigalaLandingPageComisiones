@@ -14,22 +14,16 @@
     </mat-tab>
     <mat-tab label="Organigrama">
       <div class="center-content">
-        <img src="assets/img/organigrama.png" width="750px" height="450px">
-        <button mat-flat-button color="primary" class="button-page">
-          Documento Completo
-        </button>
+        <img src="{{ organigrama }}" width="950px" height="750px" referrerpolicy="no-referrer">
+        <a class="redes-sociales-content-url" href="{{ orgranigramaCompleto }}" target="_blank">
+          <button mat-flat-button color="primary" class="button-page">
+            Documento Completo
+          </button>
+        </a>
       </div>
     </mat-tab>
     <mat-tab label="Movimientos Locales">
-      <div class="center-content">
-        <div>
-          <h1>Movimientos Locales</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </div>
+      <nosotrxs-images-component [sizeImages]="sizeImages"></nosotrxs-images-component>
     </mat-tab>
   </mat-tab-group>
 </div>

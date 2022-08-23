@@ -1,0 +1,15 @@
+<div class="nosotrxs-images-container">
+
+  <div class="nosotrxs-gallery-wrapper">
+    <div class="nosotrxs-gallery-item" *ngFor="let item of minimalGallery">
+      <img [src]="item" alt="nosotrxs-gallery image" loading="lazy" referrerpolicy="no-referrer" />
+    </div>
+  </div>
+
+  <ng-template [ngIf]="sizeImages > 0">
+    <button mat-flat-button color="primary" routerLink="/nosotrxs" class="nosotrxs-button">
+      Galeria completa
+    </button>
+  </ng-template>
+
+</div>

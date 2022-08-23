@@ -16,3 +16,8 @@ span {
     top: 0;
     width: 100%;
 }
+
+.remove-a-style {
+    text-decoration: none;
+    color: white;
+}

@@ -110,6 +110,10 @@
   align-self: center;
 }
 
+.redes-sociales-content-url {
+  color: #ffd740;
+}
+
 .icon-display {
   transform: scale(3.5);
   margin-left: 30px;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from './menu'
 import { LoaderService } from '../utils/loader.service';
+import { environment } from '../../../../environments/environment.prod';
 
 @Component({
     selector: 'app-menu',
@@ -10,8 +10,9 @@ import { LoaderService } from '../utils/loader.service';
 export class MenuComponent implements OnInit {
 
     logo_page = "Inicio";
+    archivoUrl = environment.archivoUrl;
 
-    menuItems: MenuItem[] = [
+    menuItems: any[] = [
         {
             label: 'Nosotrxs',
             showOnMobile: false,
@@ -38,7 +39,6 @@ export class MenuComponent implements OnInit {
             showOnMobile: false,
             showOnTablet: false,
             showOnDesktop: true,
-            path: 'archivo',
         }
     ];
 
