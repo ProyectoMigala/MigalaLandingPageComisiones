@@ -1,68 +1,89 @@
 
-.home-wrapper{
+.home-wrapper {
   width: 100%;
   margin: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
 }
 
 .home-header-wrapper {
   width: 100%;
+  min-height: 650px;
   height: auto;
   padding: 120px 0 0 0;
   background: url("src/assets/wave_home_migala.svg") no-repeat;
   background-size: cover;
-  background-position-x: -520px;
+  background-position-x: -620px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
   text-align: center;
+}
+
+/*#region Home-Header-Content*/
+
+.home-header-content {
+  width: 95%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .home-header-titles {
   display: flex;
   flex-flow: column;
+  justify-content: space-around;
+  align-items: start;
+  flex: 2 450px;
   gap: 15px;
-}
+  line-height: 30px;
 
-.home-header-content {
-  width: 95%;
-  display:flex;
-  justify-content: center;
 }
 
 .home-header-video {
+  flex: 1 450px;
+  min-height: 350px;
   background-color: #000;
-  overflow: hidden;
-  width: 950px;
-  height: 400px;
-  margin-bottom: 15px;
 }
 
-.title-page{
+@media only screen and (max-width: 900px) {
+  .home-header-titles {
+    align-items: center;
+  }
+}
+
+/*#endregion Home-Header-Content*/
+
+/*#region Home-Header-Titles*/
+
+.title-page {
   color: white;
   font-size: calc(16px + 5vmin);
   font-weight: 550;
-  text-align: left;
 }
 
 .title-estado {
   color: #ffd740;
 }
 
-.text-page{
+.text-page {
   color: white;
   font-size: 20px;
   text-align: left;
   width: 80%;
 }
 
+/*#region Home-Header-CTA*/
+
 .button-content {
-  margin-top: 60px;
-  margin-right: 30%;
-  align-self: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  gap: 15px;
 }
 
 .button-page {
@@ -80,13 +101,11 @@
   font-weight: 1000;
 }
 
-.nosotrxs {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0 !important;
-  margin-bottom: 4%;
-}
+/*#endregion Home-Header-CTA*/
+
+/*#endregion Home-Header-Titles*/
+
+/*#region Home-Header-Social-Networks*/
 
 .redes-sociales {
   color: #ffd740;
@@ -122,6 +141,16 @@
   margin-bottom: 0;
 }
 
+/*#endregion Home-Header-Social-Networks*/
+
+.nosotrxs {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0 !important;
+  margin-bottom: 4%;
+}
+
 .proyectos {
   display: flex;
   flex-direction: column;
@@ -131,6 +160,7 @@
   margin-bottom: 4%;
 }
 
+/*#region Home-Activities*/
 .actividades-title {
   margin-top: 7%;
   padding-bottom: 3%;
@@ -141,12 +171,27 @@
 
 .actividades {
   display: flex;
-  margin-top: 0 !important;
-  margin-bottom: 2%;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 50px;
 }
 
 .actividades-calendar {
-  width: 70%;
+  flex: 1 500px;
+  min-height: 450px;
+}
+
+.actividades-text-content {
+  flex: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.actividades-text-content-cont {
+  justify-self: flex-start;
 }
 
 .actividades-center-content {
@@ -154,29 +199,18 @@
   justify-content: center;
 }
 
-.actividades-text-content {
-  justify-content: right;
-  align-items: center;
-  max-width: 40%;
-}
-
-.actividades-text-content-cont {
-  padding-bottom: 5%;
-}
-
 .actividades-text-content-text {
-  font-size: 30px;
+  font-size: calc(18px + 1vmin);
   font-weight: 550;
-  margin-bottom: 0 !important;
 }
 
 .actividades-text-content-summary {
-  width: 60%;
+  width: 100%;
 }
 
 .actividades-text-content-summary-text {
   text-align: left;
-  font-size: 17px;
+  font-size: calc(10px + 1vmin);
 }
 
 .actividades-text-content-summary-button {
@@ -190,3 +224,13 @@
   display: flex;
   justify-content: center;
 }
+
+
+@media only screen and (max-width: 900px) {
+
+  .actividades-text-content {
+    align-items: center;
+  }
+}
+
+/*#endregion Home-Activities*/
