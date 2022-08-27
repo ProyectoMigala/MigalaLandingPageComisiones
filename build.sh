@@ -1,1 +1,0 @@
-docker build -t plataforma-migala-comisiones:latest  .
