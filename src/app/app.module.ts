@@ -49,7 +49,7 @@ import { Resource3DGenericComponent } from './components/resources/resource-3d/r
 import { ResourcesMinComponent } from './components/home/resources-min/resources-min.component';
 
 // environment
-import { environment } from '../environments/environment.prod';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [

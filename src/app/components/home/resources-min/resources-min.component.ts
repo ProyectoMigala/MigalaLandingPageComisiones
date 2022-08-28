@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { Observable } from 'rxjs';
 
-import { environment } from '../../../../environments/environment.prod';
+import { environment } from '../../../../environments/environment';
 import { Project, attributesMapping } from '../../resources/resource';
 
 @Component({
