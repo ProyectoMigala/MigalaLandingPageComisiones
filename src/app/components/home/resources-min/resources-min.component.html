@@ -1,8 +1,8 @@
 <div class="main-wrapper">
   <h1 class="proyectos-title">Proyectos</h1>
   <div class="content">
-    <div class="resource-min-wrapper">
-      <div class="resource-min-item" *ngFor="let resource of resources">
+    <div fxLayout="row wrap" fxLayoutGap="20px grid">
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let resource of resources">
         <resource-generic-component [resource]="resource"></resource-generic-component>
       </div>
     </div>
