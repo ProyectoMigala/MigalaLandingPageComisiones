@@ -4,11 +4,49 @@
 
 export const environment = {
   production: false,
-  googleSheetsApiKey: 'xxxxxxx',
+  estado: 'Programadores',
+  googleSheetsApiKey: 'xxxxxx',
+  driveFolderId: 'xxxxx',
+  organigramaID: 'xxxxx',
+  organigramaCompleto: 'xxxxxxxxxxxxxxxxx',
+  archivoUrl: 'xxxxxxxxxxxxxxxxxx',  
+  calendarEmail: 'xxxxxxxxxxxxxxxxxxx',
   project: {
-    spreadsheetId: 'xxxxxxx',
-    worksheetName: 'xxxxxxx',
+    spreadsheetId: 'xxxxxxxxxxxxxxxxxxxx',
+    worksheetName: 'xxxxxxxxxxxxxxxxxx',
   },
+  socialMedia: [
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/itizapopan',
+      fontIcon: 'fa-twitter',
+      fontSet: 'fa-brands'
+    },
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/InstitutoTecnologicoDeZapopan/',
+      fontIcon: 'fa-facebook',
+      fontSet: 'fa-brands'
+    },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/itizapopan/',
+      fontIcon: 'fa-instagram',
+      fontSet: 'fa-brands'
+    },
+    {
+      name: 'YouTube',
+      url: 'https://www.youtube.com/channel/UCZQ5ZQY4ZQZQZQZQZQZQZQ',
+      fontIcon: 'fa-youtube',
+      fontSet: 'fa-brands'
+    },
+    {
+      name: 'TikTok',
+      url: 'https://www.tiktok.com/@itizapopan',
+      fontIcon: 'fa-tiktok',
+      fontSet: 'fa-brands'
+    }
+  ]
 }
 
 /*

@@ -44,3 +44,4 @@ Thumbs.db
 !*.secret
 src/environments/environment.prod.ts
 src/environments/environment.prod.jalisco.ts
+src/environments/environment.dev.ts

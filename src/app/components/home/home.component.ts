@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from '../../../environments/environment.prod';
+import { environment } from '../../../environments/environment';
 import { GoogleCalendarService } from '../generics/services/home.service';
 
 @Component({
