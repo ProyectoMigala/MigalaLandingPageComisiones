@@ -28,6 +28,7 @@ import { TableComponent } from './components/generics/table/table.component';
 
 // pipes
 import { FilterPipe } from './components/generics/utils/filter.pipe';
+import { SafePipe } from './components/generics/utils/safe.pipe';
 
 // directives
 import { MaterialElevationDirective } from './components/generics/utils/material-elevation.directive';
@@ -67,6 +68,7 @@ import { environment } from '../environments/environment';
     ResourceComponent,
     ResourcesMinComponent,
     FilterPipe,
+    SafePipe,
     MaterialElevationDirective,
     Resource3DGenericComponent,
   ],

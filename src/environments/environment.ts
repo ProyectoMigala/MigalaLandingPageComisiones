@@ -9,8 +9,9 @@ export const environment = {
   driveFolderId: 'xxxxx',
   organigramaID: 'xxxxx',
   organigramaCompleto: 'xxxxxxxxxxxxxxxxx',
-  archivoUrl: 'xxxxxxxxxxxxxxxxxx',  
+  archivoUrl: 'xxxxxxxxxxxxxxxxxx',
   calendarEmail: 'xxxxxxxxxxxxxxxxxxx',
+  calendarUrl: 'xxxxxxxxxxxxxxxxxxxxxxx',
   project: {
     spreadsheetId: 'xxxxxxxxxxxxxxxxxxxx',
     worksheetName: 'xxxxxxxxxxxxxxxxxx',

@@ -14,7 +14,7 @@ export class ResourceComponent implements OnInit {
 
     projectObserver$!: Observable<Project[]>
 
-    resources!: any
+    resources: any = []
     searchText: string = ''
     gridColumns = 3
 

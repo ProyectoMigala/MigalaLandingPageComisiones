@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   estado = environment.estado
   socialMedia = environment.socialMedia
+  calendarUrl = environment.calendarUrl
   nextEvent = {
     title: '',
     time: '',
